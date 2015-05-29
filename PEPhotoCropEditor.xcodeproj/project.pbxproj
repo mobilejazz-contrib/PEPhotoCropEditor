@@ -27,6 +27,8 @@
 		14BB4F0C174BD7B100C75F78 /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0B174BD7B100C75F78 /* PECropViewController.m */; };
 		14BB4F11174BD7CC00C75F78 /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0E174BD7CA00C75F78 /* PECropRectView.m */; };
 		14BB4F12174BD7CC00C75F78 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F10174BD7CB00C75F78 /* PEResizeControl.m */; };
+		BF1014661B1859F0005AA8F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1014651B1859F0005AA8F0 /* Images.xcassets */; };
+		BF10146A1B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1014691B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.m */; };
 		E576407617A7889200111967 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = E576407417A7889200111967 /* UIImage+PECrop.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,9 @@
 		14BB4F0E174BD7CA00C75F78 /* PECropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PECropRectView.m; path = Lib/PECropRectView.m; sourceTree = SOURCE_ROOT; };
 		14BB4F0F174BD7CB00C75F78 /* PEResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PEResizeControl.h; path = Lib/PEResizeControl.h; sourceTree = SOURCE_ROOT; };
 		14BB4F10174BD7CB00C75F78 /* PEResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PEResizeControl.m; path = Lib/PEResizeControl.m; sourceTree = SOURCE_ROOT; };
+		BF1014651B1859F0005AA8F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		BF1014681B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTOneFingerRotationGestureRecognizer.h; sourceTree = SOURCE_ROOT; };
+		BF1014691B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTOneFingerRotationGestureRecognizer.m; sourceTree = SOURCE_ROOT; };
 		E576407417A7889200111967 /* UIImage+PECrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PECrop.m"; path = "Lib/UIImage+PECrop.m"; sourceTree = SOURCE_ROOT; };
 		E576407517A7889200111967 /* UIImage+PECrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+PECrop.h"; path = "Lib/UIImage+PECrop.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -139,6 +144,7 @@
 		14BB4EAF174BC3DD00C75F78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF1014651B1859F0005AA8F0 /* Images.xcassets */,
 				14707AE6175B99D800A58D40 /* PEPhotoCropEditor.bundle */,
 			);
 			name = Resources;
@@ -169,6 +175,7 @@
 		14BB4F06174BD79000C75F78 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BF1014671B185EE3005AA8F0 /* gestures */,
 				14BB4F0A174BD7B100C75F78 /* PECropViewController.h */,
 				14BB4F0B174BD7B100C75F78 /* PECropViewController.m */,
 				14BB4F07174BD79E00C75F78 /* PECropView.h */,
@@ -181,6 +188,15 @@
 				E576407417A7889200111967 /* UIImage+PECrop.m */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		BF1014671B185EE3005AA8F0 /* gestures */ = {
+			isa = PBXGroup;
+			children = (
+				BF1014681B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.h */,
+				BF1014691B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.m */,
+			);
+			name = gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1014661B1859F0005AA8F0 /* Images.xcassets in Resources */,
 				14BB4EC9174BC57700C75F78 /* Default-568h@2x.png in Resources */,
 				14BB4ECA174BC57700C75F78 /* Default.png in Resources */,
 				14BB4ECB174BC57700C75F78 /* Default@2x.png in Resources */,
@@ -262,6 +279,7 @@
 				14BB4F11174BD7CC00C75F78 /* PECropRectView.m in Sources */,
 				14BB4F12174BD7CC00C75F78 /* PEResizeControl.m in Sources */,
 				E576407617A7889200111967 /* UIImage+PECrop.m in Sources */,
+				BF10146A1B185EF3005AA8F0 /* KTOneFingerRotationGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

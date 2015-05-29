@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 
+#import "KTOneFingerRotationGestureRecognizer.h"
+
 @interface PECropView : UIView
 
 @property (nonatomic) UIImage *image;
@@ -26,7 +28,7 @@
 
 @property (nonatomic) CGFloat rotationAngle;
 
-@property (nonatomic, weak, readonly) UIRotationGestureRecognizer *rotationGestureRecognizer;
+@property (nonatomic, weak, readonly) KTOneFingerRotationGestureRecognizer *rotationGestureRecognizer;
 
 - (void)resetCropRect;
 - (void)resetCropRectAnimated:(BOOL)animated;

@@ -10,6 +10,8 @@
 #import "PECropRectView.h"
 #import "UIImage+PECrop.h"
 
+#import "KTOneFingerRotationGestureRecognizer.h"
+
 static const CGFloat MarginTop = 37.0f;
 //static const CGFloat MarginBottom = MarginTop;
 static const CGFloat MarginLeft = 20.0f;
@@ -74,7 +76,7 @@ static const CGFloat MarginLeft = 20.0f;
     self.scrollView.clipsToBounds = NO;
     [self addSubview:self.scrollView];
     
-    UIRotationGestureRecognizer *rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotation:)];
+    KTOneFingerRotationGestureRecognizer *rotationGestureRecognizer = [[KTOneFingerRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotation:)];
     rotationGestureRecognizer.delegate = self;
     _rotationGestureRecognizer = rotationGestureRecognizer;
     [self.scrollView addGestureRecognizer:rotationGestureRecognizer];
@@ -85,19 +87,19 @@ static const CGFloat MarginLeft = 20.0f;
     
     self.topOverlayView = [[UIView alloc] init];
     self.topOverlayView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-    [self addSubview:self.topOverlayView];
+//    [self addSubview:self.topOverlayView];
     
     self.leftOverlayView = [[UIView alloc] init];
     self.leftOverlayView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-    [self addSubview:self.leftOverlayView];
+//    [self addSubview:self.leftOverlayView];
     
     self.rightOverlayView = [[UIView alloc] init];
     self.rightOverlayView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-    [self addSubview:self.rightOverlayView];
+//    [self addSubview:self.rightOverlayView];
     
     self.bottomOverlayView = [[UIView alloc] init];
     self.bottomOverlayView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-    [self addSubview:self.bottomOverlayView];
+//    [self addSubview:self.bottomOverlayView];
 }
 
 #pragma mark -
@@ -485,7 +487,7 @@ static const CGFloat MarginLeft = 20.0f;
 
 #pragma mark -
 
-- (void)handleRotation:(UIRotationGestureRecognizer *)gestureRecognizer
+- (void)handleRotation:(KTOneFingerRotationGestureRecognizer *)gestureRecognizer
 {
     CGFloat rotation = gestureRecognizer.rotation;
     
